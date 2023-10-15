@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import NavBar from './components/NavBar';
+import Heading from './components/Heading';
+import Features from './components/Features';
+import Tools from './components/Tools';
+import News from './components/News';
+import Footer from './components/Footer';
+import { ThemeProvider } from 'styled-components';
+import theme from './theme';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+      {/* <NavBar/> */}
+			<Heading />
+			<Features />
+			<Tools />
+			<News />
+			<Footer />
+		</ThemeProvider>
+	);
 }
 
 export default App;
